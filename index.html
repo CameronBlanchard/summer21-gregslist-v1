@@ -28,7 +28,8 @@
                     <button class="btn btn-primary btn-block" onclick="app.carsController.drawCars()">Cars</button>
                 </div>
                 <div class="col-2">
-                    <button class="btn btn-primary btn-block">Houses</button>
+                    <button class="btn btn-primary btn-block"
+                        onclick="app.housesController.drawHouses()">Houses</button>
                 </div>
                 <!-- <div class="col-2"><button class="btn btn-info">Missed Connections Soooon</button></div>
                 <div class="col-2"><button class="btn btn-info"></button></div>
@@ -41,7 +42,8 @@
 
             <div class="row mb-5">
                 <div class="col-12">
-                    <button class="fab" onclick="app.carsController.toggleForm()">+</button>
+                    <button class="fabCar" onclick="app.carsController.toggleForm()">Cars</button>           
+                    <button class="fabHouse" onclick="app.housesController.toggleForm()">House</button>
                 </div>
                 <div class="col-lg-8 m-auto">
                     <form class="card p-3 shadow d-none" id="car-form" onsubmit="app.carsController.addCar(event)">
@@ -71,14 +73,40 @@
                         </div>
                         <button type="submit">submit form</button>
                     </form>
-                    <!-- <form onsubmit="app.housesController.addHouse(event)">
-                        TODO that you not me
-                    </form> -->
+
+                    <form class="card shadow p-3 d-none" id="house-form" onsubmit="app.housesController.addHouse(event)">
+                        <div class="form-group">
+                            <label for="bedroom" class="sr-only">Bedroom:</label>
+                            <input class="form-control" placeholder="bedroom" type="text" id="bedroom" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="bath" class="sr-only">bath</label>
+                            <input class="form-control" placeholder="bath" type="text" id="bath" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="sqfoot" class="sr-only">SqFoot</label>
+                            <input class="form-control" placeholder="sqfoot" type="text" id="sqfootage" />
+                        </div>
+                        <div class="form-group">
+                            <label for="garage" class="sr-only">Garage</label>
+                            <input class="form-control" placeholder="garage" type="text" id="garage" />
+                        </div>
+                        <div class="form-group">
+                            <label for="town" class="sr-only">Town</label>
+                            <input class="form-control" placeholder="town" type="text" id="town" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="img" class="sr-only">Image</label>
+                            <input class="form-control" placeholder="img" type="text" id="img" />
+                        </div>
+                        <button type="submit">Submit form>
+                    </form></button>
+                    </form>
+
                 </div>
             </div>
-
-
         </div>
+
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">

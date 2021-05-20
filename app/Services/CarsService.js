@@ -12,3 +12,4 @@ class CarsService{
 
 // NOTE singleton
 export const carsService = new CarsService()
+
